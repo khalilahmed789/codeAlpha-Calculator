@@ -1,7 +1,20 @@
+const display = document.querySelector("#display");
 function writeValue(value) {
-     document.getElementById("display").value += value;
+  display.value += value;
 }
-function add(value) {
-     value + value;
-     document.getElementById("display").value += value;
+
+function eraseAll() {
+  display.value = "";
+}
+
+function deleteLast() {
+  display.value = display.value.slice(0, -1);
+}
+
+function calculate() {
+  try {
+    display.value = eval(display.value);
+  } catch (error) {
+    display.value = "Error";
+  }
 }

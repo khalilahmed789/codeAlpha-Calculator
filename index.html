@@ -7,36 +7,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="calculator">
+      <div class="container">
       <section class="display-section">
-        <input id="display" type="text" />
+        <input type="text" id="display" readonly/>
       </section>
       <section class="input">
         <!-- Row-1 -->
-        <button class="operators" id="eraseAll" onclick="eraseAll">C</button>
-        <button class="operators" id="division" onclick="writeValue('/'); divide();">/</button>
-        <button class="operators" id="multiplication" onclick="writeValue('*'); multiply();">*</button>
-        <button class="operators" id="erase" onclick="erase();">x</button>
+        <button class="operators" onclick="eraseAll()">C</button>
+        <button class="operators" onclick="writeValue('/')">/</button>
+        <button class="operators" onclick="writeValue('*')">*</button>
+        <button class="operators" id="erase" onclick="deleteLast();">x</button>
         <!-- Row-2 -->
-        <button id="7" onclick="writeValue('7')">7</button>
-        <button id="8" onclick="writeValue('8')">8</button>
-        <button id="9" onclick="writeValue('9')">9</button>
-        <button class="operators" id="subtraction" onclick="writeValue('-'); subtract();">-</button>
+        <button onclick="writeValue('7')">7</button>
+        <button onclick="writeValue('8')">8</button>
+        <button onclick="writeValue('9')">9</button>
+        <button class="operators" onclick="writeValue('-')">-</button>
         <!-- Row-3 -->
-        <button id="4" onclick="writeValue('4')">4</button>
-        <button id="5" onclick="writeValue('5')">5</button>
-        <button id="6" onclick="writeValue('6')">6</button>
-        <button class="operators" id="addition" onclick="writeValue('+'); add(value);">+</button>
+        <button onclick="writeValue('4')">4</button>
+        <button onclick="writeValue('5')">5</button>
+        <button onclick="writeValue('6')">6</button>
+        <button class="operators" onclick="writeValue('+')">+</button>
         <!-- Row-4 -->
-        <button id="1" onclick="writeValue('1')">1</button>
-        <button id="2" onclick="writeValue('2')">2</button>
-        <button id="3" onclick="writeValue('3')">3</button>
-        <button class="equalTo" id="equalTo" onclick="equalTo()">=</button>
+        <button onclick="writeValue('1')">1</button>
+        <button onclick="writeValue('2')">2</button>
+        <button onclick="writeValue('3')">3</button>
+        <button class="equalTo" onclick="calculate()">=</button>
         <!-- Row-5 -->
-        <button id="percentage" onclick="writeValue('%')">%</button>
-        <button id="0" onclick="writeValue('0')">0</button>
-        <button id="fullStop" onclick="writeValue('.')">.</button>
+        <button onclick="writeValue('%')">%</button>
+        <button onclick="writeValue('0')">0</button>
+        <button onclick="writeValue('.')">.</button>
       </section>
+      </div>
     </div>
   </body>
   <script src="script.js"></script>
