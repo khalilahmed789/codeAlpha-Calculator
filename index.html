@@ -8,36 +8,27 @@
   </head>
   <body>
     <div class="calculator">
-      <div class="container">
-      <section class="display-section">
         <input type="text" id="display" readonly/>
-      </section>
-      <section class="input">
-        <!-- Row-1 -->
-        <button class="operators" onclick="eraseAll()">C</button>
-        <button class="operators" onclick="writeValue('/')">/</button>
-        <button class="operators" onclick="writeValue('*')">*</button>
-        <button class="operators" id="erase" onclick="deleteLast();">x</button>
-        <!-- Row-2 -->
+      <div class="buttons">
+        <button class="clear" onclick="eraseAll()">AC</button>
+        <button class="delete" id="erase" onclick="deleteLast();">DEL</button>
+        <button class="operators" onclick="percentage()">%</button>
+        <button class="operators" onclick="writeValue('/')">÷</button>
         <button onclick="writeValue('7')">7</button>
         <button onclick="writeValue('8')">8</button>
         <button onclick="writeValue('9')">9</button>
-        <button class="operators" onclick="writeValue('-')">-</button>
-        <!-- Row-3 -->
+        <button class="operators" onclick="writeValue('*')">x</button>
         <button onclick="writeValue('4')">4</button>
         <button onclick="writeValue('5')">5</button>
         <button onclick="writeValue('6')">6</button>
         <button class="operators" onclick="writeValue('+')">+</button>
-        <!-- Row-4 -->
         <button onclick="writeValue('1')">1</button>
         <button onclick="writeValue('2')">2</button>
         <button onclick="writeValue('3')">3</button>
-        <button class="equalTo" onclick="calculate()">=</button>
-        <!-- Row-5 -->
-        <button onclick="writeValue('%')">%</button>
-        <button onclick="writeValue('0')">0</button>
+        <button class="operators" onclick="writeValue('-')">-</button>
+        <button class="zero" onclick="writeValue('0')">0</button>
         <button onclick="writeValue('.')">.</button>
-      </section>
+        <button class="equal" onclick="calculate()">=</button>
       </div>
     </div>
   </body>
